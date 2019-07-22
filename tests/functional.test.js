@@ -1,15 +1,4 @@
 const puppeteer = require('puppeteer');
-const { generateText, checkAndGenerate } = require('./util');
-
-test('should output name and age', () => {
-    const text = generateText('Max', 29);
-    expect(text).toBe('Max (29 years old)');
-});
-
-test('should generate a valid text output', () => {
-    const text = checkAndGenerate('Max', 29);
-    expect(text).toBe('Max (29 years old)')
-});
 
 test('should create an element with text and correct class', async () => {
     const browser = await puppeteer.launch({
